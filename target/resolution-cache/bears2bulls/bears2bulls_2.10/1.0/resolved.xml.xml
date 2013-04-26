@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
-	<info organisation="default"
-		module="default-33f411_2.9.2"
-		revision="0.1-SNAPSHOT"
+	<info organisation="bears2bulls"
+		module="bears2bulls_2.10"
+		revision="1.0"
 		status="integration"
-		publication="20130425213422"
+		publication="20130425213629"
 	>
 		<description>
-		default-33f411
+		Bears2Bulls
 		</description>
 	</info>
 	<configurations>
@@ -25,16 +25,16 @@
 		<conf name="pom" visibility="public" description=""/>
 	</configurations>
 	<publications>
-		<artifact name="default-33f411_2.9.2" type="pom" ext="pom" conf="pom"/>
-		<artifact name="default-33f411_2.9.2" type="jar" ext="jar" conf="compile"/>
-		<artifact name="default-33f411_2.9.2" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		<artifact name="default-33f411_2.9.2" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		<artifact name="bears2bulls_2.10" type="pom" ext="pom" conf="pom"/>
+		<artifact name="bears2bulls_2.10" type="jar" ext="jar" conf="compile"/>
+		<artifact name="bears2bulls_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		<artifact name="bears2bulls_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 	</publications>
 	<dependencies>
-		<dependency org="org.scala-lang" name="scala-library" rev="2.9.2" conf="compile->default(compile)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.10.1" conf="compile->default(compile)"/>
 		<exclude org="org.scala-lang" module="scala-library" artifact="*" type="jar" ext="*" matcher="exact"/>
 		<exclude org="org.scala-lang" module="scala-compiler" artifact="*" type="jar" ext="*" matcher="exact"/>
-		<override org="org.scala-lang" module="scala-library" matcher="exact" rev="2.9.2"/>
-		<override org="org.scala-lang" module="scala-compiler" matcher="exact" rev="2.9.2"/>
+		<override org="org.scala-lang" module="scala-library" matcher="exact" rev="2.10.1"/>
+		<override org="org.scala-lang" module="scala-compiler" matcher="exact" rev="2.10.1"/>
 	</dependencies>
 </ivy-module>

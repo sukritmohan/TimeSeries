@@ -2,12 +2,12 @@
 <?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
 <ivy-report version="1.0">
 	<info
-		organisation="default"
-		module="default-33f411_2.9.2"
-		revision="0.1-SNAPSHOT"
-		conf="optional"
+		organisation="bears2bulls"
+		module="bears2bulls_2.10"
+		revision="1.0"
+		conf="docs"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom"
-		date="20130425213422"/>
+		date="20130425213629"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>

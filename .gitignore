@@ -39,4 +39,5 @@ Thumbs.db
 
 # idea files #
 .idea
+.idea_modules
 target

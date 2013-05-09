@@ -17,7 +17,7 @@ class Company (val ticker : String,
                private val pressPage : String,
                private val stockPage : String) {
 
-  val dataFileName = Constants.PROJECT_DIRECTORY + """data/stockPrices/""" + ticker.toLowerCase + """.dat"""
+  val dataFileName = Constants.PROJECT_DIRECTORY + """../data/stockPrices/""" + ticker.toLowerCase + """.dat"""
 
   private val stockPageRegex = """(.*)d=(.*)(&amp;)e=(.*)&amp;f=(.*)&amp;(.*)a=(.*)&amp;b=(.*)&amp;c=(.*)&amp;(.*)""".r
 

@@ -7,6 +7,6 @@ package utils
 
 object Constants {
 
-  val PROJECT_DIRECTORY = """/Users/sukritmohan/Documents/Code/Workspace/StockPriceAnalysis/""";
+  val PROJECT_DIRECTORY = """/Users/sukrit/Documents/Code/Bears2Bulls/metadata/""";
 
 }

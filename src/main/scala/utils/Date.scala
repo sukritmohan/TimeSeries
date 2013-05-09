@@ -84,4 +84,5 @@ object Date {
   }
 
   def getEpochTime(d: Date) = df.parse(d.toString()).getTime
+  def getEpochTime(d: String) = df.parse(d).getTime
 }

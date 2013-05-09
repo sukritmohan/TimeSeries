@@ -1,4 +1,4 @@
-package main.scala.dataUtils
+package utils
 
 /**
  * User: sukrit

@@ -1,4 +1,4 @@
-package main.scala.dataUtils
+package utils
 
 import breeze.plot._
 

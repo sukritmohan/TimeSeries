@@ -11,23 +11,6 @@ import utils._
 object DataCollectionController {
 
   def main(args: Array[String]): Unit = {
-    /*
-    val toSave = Constants.PROJECT_DIRECTORY + """lib/lines.png"""
-
-    val xV = for(i <- 1 to 1000)
-    			yield (i)
-
-    val xVal = xV toArray
-    val f = Figure()
-    val p = f.subplot(0)
-	//val x = linspace(0.0,1.0)
-	p += plot(xVal, xVal :^ 2.0)
-	p += plot(x, x :^ 3.0, '.')
-	p.xlabel = "x axis"
-	p.ylabel = "y axis"
-	f.saveas(toSave)
-	*/
-
 
     val tickerFile = Source.fromFile(Constants.PROJECT_DIRECTORY + """lib/cleanTicker.csv""")
 

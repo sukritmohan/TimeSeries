@@ -1,5 +1,7 @@
 package utils
 
+import java.text.SimpleDateFormat
+
 /**
  * User: sukrit
  * Date: 4/25/13
@@ -66,12 +68,20 @@ class Date (val year: Int, val month: Int, val date: Int){
       case 12 => 31
     }
   }
+
+  override def toString() : String = year.toString + "-" + month.toString + "-" + date.toString
+
+  def getEpochTime() = Date.getEpochTime(this)
 }
 
 object Date {
+
+  val df = new SimpleDateFormat("yyyy-MM-dd")
 
   def getToday() = {
     val today = new java.util.Date
     new Date(today.getYear() + 1900, today.getMonth() + 1, today.getDate())
   }
+
+  def getEpochTime(d: Date) = df.parse(d.toString()).getTime
 }

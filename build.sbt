@@ -12,7 +12,8 @@ libraryDependencies  ++= Seq(
             "org.scalanlp" %% "breeze-math" % "0.2",
             "org.scalanlp" %% "breeze-learn" % "0.2",
             "org.scalanlp" %% "breeze-process" % "0.2",
-            "org.scalanlp" %% "breeze-viz" % "0.2"
+            "org.scalanlp" %% "breeze-viz" % "0.2",
+	    "javax.mail" % "mail" % "1.4"
 )
 
 resolvers ++= Seq(

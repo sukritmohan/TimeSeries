@@ -15,7 +15,7 @@ class Mailman (sendFrom: String, sendPwd: String) {
   var SMTP_PORT: String = 587.toString
 
   var sendTo: String = _
-  var senderName = "QFMailman"
+  var senderName = "Bears2Bulls Mailman"
 
   var emailSubject: String = _
   var emailBody: String = _
@@ -61,14 +61,14 @@ class Mailman (sendFrom: String, sendPwd: String) {
     message
   }
 
-  def sendEmail(smtpHost:String=SMTP_HOST,
+  def sendEmail(sendTo:String=sendTo,
+                emailSubject:String=emailSubject,
+                emailBody:String=emailBody,
+                smtpHost:String=SMTP_HOST,
                 smtpPort:String=SMTP_PORT,
-                sendTo:String=sendTo,
                 sendFrom:String=sendFrom,
                 senderName:String=senderName,
-                sendPwd:String=sendPwd,
-                emailSubject:String=emailSubject,
-                emailBody:String=emailBody) = {
+                sendPwd:String=sendPwd) = {
 
 
     val messageToSend = message(props(smtpHost, smtpPort),

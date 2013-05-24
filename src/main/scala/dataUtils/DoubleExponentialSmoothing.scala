@@ -1,4 +1,4 @@
-package main.scala.dataUtils
+package dataUtils
 
 import scala.collection.mutable.Buffer
 

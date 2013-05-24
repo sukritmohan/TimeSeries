@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat
  * Date: 4/25/13
  */
 
-class Date (val year: Int, val month: Int, val date: Int){
+class  Date (val year: Int, val month: Int, val date: Int){
 
   private val leapYear = if((year%100==0 && year%400==0) || (year%100!=0 && year%4==0))
     true
@@ -85,4 +85,6 @@ object Date {
 
   def getEpochTime(d: Date) = df.parse(d.toString()).getTime
   def getEpochTime(d: String) = df.parse(d).getTime
+
+  def apply(year: Int, month: Int, date: Int) = new Date (year, month, date)
 }

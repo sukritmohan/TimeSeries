@@ -32,4 +32,26 @@ object DataPreparation {
     }.sortWith(_._1 < _._1)
   }
 
+  def prepStockTSWithIndex(ticker: String) = {
+    prepareStockTimeSeries(ticker).zipWithIndex.map(v => (v._2.toDouble, v._1._2))
+  }
+
+  def prepStockTSWithIndex(ticker: String, start: Date, end: Date) = {
+    prepareStockTimeSeries(ticker, start, end).zipWithIndex.map(v => (v._2.toDouble, v._1._2))
+  }
+
+  def getLinearSmoothedPlot(origData: List[(Double,Double)], smoothingParam: Int) = {
+    val x = origData.map(_._1)
+    val y = origData.map(_._2)
+    val newY = DataSmoothing.linearSmoothing(y, smoothingParam)
+    x zip newY
+  }
+
+  def getExponentialSmoothedPlot(origData: List[(Double,Double)], smoothingParam: Double) = {
+    val x = origData.map(_._1)
+    val y = origData.map(_._2)
+    val newY = DataSmoothing.exponentialSmoothing(y, smoothingParam)
+    x zip newY
+  }
+
 }

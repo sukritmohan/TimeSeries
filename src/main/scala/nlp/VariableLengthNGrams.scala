@@ -1,4 +1,4 @@
-package dataUtils
+package nlp
 
 /**
  * User: sukrit
@@ -8,7 +8,6 @@ import scala.collection.mutable.Buffer
 import breeze.text.tokenize._
 import breeze.text.segment._
 import breeze.text.analyze._
-import collection.mutable
 
 class VarNGrams {
 
@@ -90,14 +89,13 @@ class VarNGrams {
       sentenceTokens =>
         val gramsProb = generateGramsForSentence(sentenceTokens, scala.collection.mutable.Map[String, (Buffer[String], Double)]())
         val grams = gramsProb._1
-        val prob = gramsProb._2
         grams.toList
     }
   }
 
   private def generateGramsForSentence(tokens: List[String],
                                        map : scala.collection.mutable.Map[String, (Buffer[String], Double)]) :
-  (Buffer[String], Double, scala.collection.mutable.Map[String, (Buffer[String], Double)])= {
+    (Buffer[String], Double, scala.collection.mutable.Map[String, (Buffer[String], Double)])= {
 
     val thisGram = Buffer[String]()
     var maxProbability = 0.0
@@ -107,10 +105,10 @@ class VarNGrams {
     var remainingTokens = tokens
 
     var currNodeOpt = if(remainingTokens.isEmpty) {
-      maxProbability = 1.0
-      None
-    }
-    else Some(root)
+        maxProbability = 1.0
+        None
+      }
+      else Some(root)
 
     while(currNodeOpt != None) {
 

@@ -4,7 +4,7 @@ package utils
  * User: sukrit
  * Date: 5/6/13
  */
-class MathUtils {
+object MathUtils {
 
   /**
    * Mean square error
@@ -22,7 +22,7 @@ class MathUtils {
   def derivative (data: List[(Double, Double)], points: Int) : List[(Double, Double)] = {
     data.sliding(points).toList.map {
       t=>
-        (t(points/2)._1.toDouble, (t(points-1)._2 - t(0)._2).toDouble/(t(points-1)._1 - t(0)._1).toDouble)
+        (t(points-1)._1.toDouble, (t(points-1)._2 - t(0)._2).toDouble/(t(points-1)._1 - t(0)._1).toDouble)
     }
   }
 

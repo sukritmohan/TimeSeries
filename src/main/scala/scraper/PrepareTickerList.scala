@@ -1,4 +1,4 @@
-package dataCollection
+package scraper
 
 /**
  * User: sukrit

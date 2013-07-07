@@ -54,4 +54,15 @@ object DataPreparation {
     x zip newY
   }
 
+  def getSmoothedDerivative(origData: List[(Double, Double)], smoothingParam: Int) = {
+    val deri = MathUtils.derivative(origData, 2)
+
+    getLinearSmoothedPlot(deri, 3)
+  }
+
+  // TEMP FUNCTION, only for quick testing.
+  def prep(ticker: String) = {
+    prepStockTSWithIndex(ticker, Date(2008, 10, 1), Date(2011, 10, 1))
+  }
+
 }

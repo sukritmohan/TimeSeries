@@ -25,7 +25,12 @@ libraryDependencies  ++= Seq(
 	    "com.fasterxml.jackson.core" % "jackson-databind" % "2.2.2",
 	    "com.fasterxml.jackson.module" % "jackson-module-scala_2.10" % "2.2.1",
 	    // Stanford NLP stuff (might need this later)
-	    "edu.stanford.nlp" % "stanford-corenlp" % "1.3.5" 
+	    "edu.stanford.nlp" % "stanford-corenlp" % "1.3.5",
+	    //Goose webpage extraction
+	    "com.gravity" % "goose" % "2.1.22",
+	    //HTTP-Client (for testing kayak download only)
+		//org.apache.commons.httpclient._
+	    "commons-httpclient" % "commons-httpclient" % "3.1"
 )
 
 resolvers ++= Seq(
@@ -45,5 +50,6 @@ initialCommands := """
     val start = now
     try { f } finally { println("Elapsed: " + (now - start)/1000.0 + " s") }
   }
+  import dataUtils.DataPreparation
 """
 
